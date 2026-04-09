@@ -1,0 +1,17 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#1A1A2E"/>
+  <g transform="translate(128,100) scale(0.5)">
+    <ellipse cx="256" cy="350" rx="90" ry="106" fill="#2EC4B6"/>
+    <ellipse cx="256" cy="363" rx="65" ry="80" fill="#CBF3F0"/>
+    <circle cx="256" cy="200" r="85" fill="#2EC4B6"/>
+    <circle cx="256" cy="208" r="64" fill="#CBF3F0" opacity=".5"/>
+    <ellipse cx="229" cy="128" rx="11" ry="30" fill="#FF6B35" transform="rotate(-15 229 128)"/>
+    <ellipse cx="256" cy="118" rx="9" ry="34" fill="#FFBE0B"/>
+    <ellipse cx="283" cy="128" rx="11" ry="30" fill="#FF6B35" transform="rotate(15 283 128)"/>
+    <circle cx="220" cy="188" r="24" fill="white"/><circle cx="292" cy="188" r="24" fill="white"/>
+    <circle cx="224" cy="186" r="12" fill="#1A1A2E"/><circle cx="288" cy="186" r="12" fill="#1A1A2E"/>
+    <circle cx="228" cy="182" r="4.5" fill="white"/><circle cx="292" cy="182" r="4.5" fill="white"/>
+    <path d="M230 224 Q256 212 282 224 Q256 242 230 224Z" fill="#FFBE0B" stroke="#E6A800" stroke-width="1.5"/>
+  </g>
+  <text x="256" y="460" text-anchor="middle" font-family="sans-serif" font-size="32" font-weight="700" fill="#2EC4B6">English Quest</text>
+</svg>
