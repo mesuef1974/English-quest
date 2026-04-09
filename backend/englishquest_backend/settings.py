@@ -13,6 +13,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions", "django.contrib.messages", "django.contrib.staticfiles",
     "rest_framework", "rest_framework_simplejwt", "corsheaders",
     "accounts", "learning", "progress",
+    "payments",
 ]
 
 MIDDLEWARE = [
@@ -66,3 +67,11 @@ USE_TZ = True
 STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MAX_CHILDREN_PER_PARENT = 4
+
+# ═══════ PAYMENTS ═══════
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "sk_test_placeholder")
+STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "pk_test_placeholder")
+STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "whsec_placeholder")
+TAP_SECRET_KEY = os.environ.get("TAP_SECRET_KEY", "sk_test_placeholder")
+TAP_PUBLISHABLE_KEY = os.environ.get("TAP_PUBLISHABLE_KEY", "pk_test_placeholder")
+FREE_TRIAL_DAYS = 7
