@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1A1A2E" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="English Quest" />
+  <meta name="description" content="تطبيق تعليمي تفاعلي لتعليم الإنجليزية للأطفال العرب مع شخصية فصيح الببغاء" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>English Quest — رحلة تعلّم الإنجليزية 🦜</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Kufi Arabic', 'Fredoka', sans-serif; background: #0f172a; overflow-x: hidden; }
+    #root { min-height: 100vh; min-height: 100dvh; }
+    /* Splash screen */
+    #splash { position: fixed; inset: 0; background: #0f172a; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.5s; }
+    #splash.hide { opacity: 0; pointer-events: none; }
+    #splash svg { animation: bounce 1.5s ease-in-out infinite; }
+    #splash h1 { color: white; font-size: 24px; margin-top: 16px; }
+    #splash p { color: #2EC4B6; font-size: 14px; margin-top: 8px; }
+    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  </style>
+</head>
+<body>
+  <!-- Splash screen while JS loads -->
+  <div id="splash">
+    <svg viewBox="0 0 100 130" width="120" height="156">
+      <ellipse cx="50" cy="115" rx="14" ry="12" fill="#1B998B" opacity=".8"/>
+      <ellipse cx="50" cy="85" rx="26" ry="32" fill="#2EC4B6"/>
+      <ellipse cx="50" cy="89" rx="19" ry="24" fill="#CBF3F0"/>
+      <circle cx="50" cy="40" r="24" fill="#2EC4B6"/>
+      <ellipse cx="44" cy="18" rx="3" ry="8" fill="#FF6B35" transform="rotate(-15 44 18)"/>
+      <ellipse cx="50" cy="16" rx="2.5" ry="9" fill="#FFBE0B"/>
+      <ellipse cx="56" cy="18" rx="3" ry="8" fill="#FF6B35" transform="rotate(15 56 18)"/>
+      <circle cx="40" cy="37" r="7" fill="white"/><circle cx="60" cy="37" r="7" fill="white"/>
+      <circle cx="41" cy="36.5" r="3.5" fill="#1A1A2E"/><circle cx="59" cy="36.5" r="3.5" fill="#1A1A2E"/>
+      <circle cx="42" cy="35.5" r="1.2" fill="white"/><circle cx="60" cy="35.5" r="1.2" fill="white"/>
+      <circle cx="34" cy="44" r="4" fill="#FF9F9F" opacity=".3"/>
+      <circle cx="66" cy="44" r="4" fill="#FF9F9F" opacity=".3"/>
+      <path d="M45 44 Q50 41 55 44 Q50 48 45 44Z" fill="#FFBE0B" stroke="#E6A800" stroke-width=".5"/>
+    </svg>
+    <h1>English Quest</h1>
+    <p>...جاري التحميل</p>
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
